@@ -1,0 +1,114 @@
+.dog-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.dog-body {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: #fbe4c5;
+    border-radius: 50%;
+}
+
+.dog-head {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    background-color: #fbe4c5;
+    border-radius: 50%;
+}
+
+.dog-ears {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+}
+
+.ear-left, .ear-right {
+    width: 20px;
+    height: 40px;
+    background-color: #fbe4c5;
+    border-radius: 50%;
+    transform: rotate(10deg);
+}
+
+.ear-right {
+    transform: rotate(-10deg);
+}
+
+.dog-face {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dog-eyes {
+    display: flex;
+    justify-content: space-between;
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.eye-left, .eye-right {
+    width: 10px;
+    height: 10px;
+    background-color: #000;
+    border-radius: 50%;
+}
+
+.dog-nose {
+    width: 10px;
+    height: 10px;
+    background-color: #000;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.dog-mouth {
+    width: 20px;
+    height: 10px;
+    background-color: #000;
+    border-radius: 50%;
+}
+
+.dog-legs {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+}
+
+.leg-left, .leg-right {
+    width: 20px;
+    height: 50px;
+    background-color: #fbe4c5;
+    border-radius: 50%;
+}
+
+.dog-tail {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 50px;
+    background-color: #fbe4c5;
+    border-radius: 50%;
+}

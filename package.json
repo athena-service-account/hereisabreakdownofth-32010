@@ -1,0 +1,35 @@
+{
+  "name": "hereisabreakdownofth-32010",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "cycle": "git add . ; git commit -m 'cycle' ; git push origin main",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "pages:build": "npx @cloudflare/next-on-pages",
+    "preview": "npm run pages:build && wrangler pages dev",
+    "deploy": "npm run pages:build && wrangler pages deploy",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv ./env.d.ts"
+  },
+  "dependencies": {
+    "framer-motion": "^12.23.0",
+    "next": "15.3.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-icons": "^5.5.0"
+  },
+  "devDependencies": {
+    "@cloudflare/next-on-pages": "^1.13.12",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20.19.4",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "vercel": "^44.2.12",
+    "wrangler": "^4.23.0"
+  },
+  "description": "ArtHive is a simulated social media platform designed to connect local artists with potential buyers in their area. The application will have a vibrant, modern design, incorporating a palette of colors that evoke creativity and community. All functionality, including user profiles, art showcases, and purchase interactions, will be simulated on the client-side, using mock data to demonstrate the platform's features.\n\nThe application's core functionality will be managed through a combination of hardcoded mock data and client-side logic. This will allow users to browse through a catalog of local art pieces, view artist profiles, and engage with the community through simulated comments and reviews. The platform will also include features for artists to manage their portfolios, set prices for their work, and track \"sales\" through the simulated environment.\n\nHere is a breakdown of the core features and components:\n*   **Pages:**\n  *   **Home:** A showcase of featured local art pieces, with filters for location, art type, and price range.\n  *   **Artist Profile:** A page dedicated to each artist, displaying their bio, portfolio, and contact information.\n  *   **Art Detail:** A page for each art piece, including images, descriptions, prices, and a \"buy now\" button that simulates a purchase.\n*   **Core Components:**\n  *   **`ArtCard`:** A component that displays a single art piece, with image, title, price, and a \"view details\" button.\n  *   **`ArtistCard`:** A component showcasing an artist, with their image, name, bio snippet, and a \"view profile\" button.\n  *   **`PurchaseSimulator`:** A component that simulates the buying process, updating the user's mock \"cart\" and providing a confirmation message.\n*   **Mock Data Structure:**\n  *   **`artists.js`:** An array of artist objects, each containing `id`, `name`, `bio`, `portfolio` (an array of art piece IDs), and `location`.\n  *   **`artPieces.js`:** An array of art piece objects, each with `id`, `title`, `description`, `price`, `imageUrl`, and `artistId` (linking to the artist)."
+}
